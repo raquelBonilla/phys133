@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link to the cdn-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="favicon5.png" sizes="32x32" />
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Tangerine:700" rel="stylesheet">
+
+        <title>PHYS133</title>
+    </head>
+
+    <body>
+
+
+        <div class="container title">
+            <div class="row">
+                <div class="col-md-6 col-sm-push-4">
+                    <h1>Welcome to Study Sesh</h1>
+                    <h4> a website by Raquel Bonilla</h4>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <p>This is a single web page application that will help you study for the final using Midterm 1 2016. You can enter your own test numbers, then try to answer the questions correctly. Happy studying!</p>
+            <br>
+            <br>
+        </div>
+
+
+        <div class="container">
+            <div class="rows">
+                <div class="col-md-6 col-sm-push-3">
+
+                    <button onclick="revealQ1()" class="btn btn-primary">Question 1</button>
+
+                    <button onclick="revealQ2()" class="btn btn-primary">Question 2</button>
+
+
+                    <button onclick="revealQ3()" class="btn btn-primary">Question 3</button>
+                    <button onclick="revealQ4()" class="btn btn-primary">Question 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden container" id="question1">
+
+
+            <!--START OF QUESTION 1 -->
+
+            <h3>Question #1</h3>
+            <p>A simple harmonic oscillator consisting of a mass/spring system is set into oscillations. At t=0 the
+                <input type="number" id="massQ1" placeholder="Enter mass in kg"> kg mass is at
+                <input type="number" id="deltaXQ1" placeholder="Enter delta x in m"> m and the total energy of the system is
+                <input type="number" id="totalEQ1" placeholder="Enter energy in joules"> J. The amplitude of oscillations is
+                <input type="number" id="amplitudeQ1" placeholder="Enter amplitude in m"> m.</p>
+
+            <p>a) What is the spring constant?</p>
+            <input type="number" id="userAnswer1a" placeholder="Enter Answer">
+            <button onclick="question1a()" class="btn btn-primary">Submit</button>
+
+            <p>b) What is the angular frequency?</p>
+            <input type="number" id="userAnswer1b" placeholder="Enter Answer">
+            <button onclick="question1b()" class="btn btn-primary">Submit</button>
+
+            <p>c) What is the time period of the oscillations for this system?</p>
+            <input type="number" id="userAnswer1c" placeholder="Enter Answer">
+            <button onclick="question1c()" class="btn btn-primary">Submit</button>
+            <p>d) What distance from equilibrium position is the mass when its kinetic energy is 0.300 J?</p>
+            <input type="number" id="userAnswer1d" placeholder="Enter Answer">
+            <button onclick="question1d()" class="btn btn-primary">Submit</button>
+
+            <p>e) A simple pendulum is to be constructed such that the frequency of its oscillations is half that of this mass spring system. What length of string should be used?</p>
+            <input type="number" id="userAnswer1e" placeholder="Enter Answer">
+            <button onclick="question1e()" class="btn btn-primary">Submit</button>
+
+        </div>
+
+        <!--START OF QUESTION 2 -->
+
+        <div class="hidden container" id="question2">
+
+
+            <h3>Question #2</h3>
+            <p>Sinusoidal waves are generated on a string using a harmonic oscillator. The wave length of the waves are measured to be
+                <input type="number" id="waveLengthQ2" placeholder="Enter wavelength"> m and the frequency of the oscillator is set to
+                <input type="number" id="freqQ2" placeholder="Enter frequency"> Hz. The wave amplutide is
+                <input type="number" id="amplitudeQ2" placeholder="Enter amplitude"> m and the tension in the string is
+                <input type="number" id="tensionQ2" placeholder="Enter tension"> N.</p>
+
+            <p>a) What is the linear mass denstity of the string?</p>
+            <input type="number" id="userAnswer2a" placeholder="Enter Answer">
+            <button onclick="question2a()" class="btn btn-primary">Submit</button>
+
+            <p>b) At what position will elements of the string have a transverse velocity equal to
+                <input type="number" id="percentQ2" placeholder="Enter Answer">% of the maximum in the negative direction at a time of 1.25 seconds?</p>
+            <input type="number" id="userAnswer2b" placeholder="Enter Answer">
+            <button onclick="question2b()" class="btn btn-primary">Submit</button>
+
+            <p>c) What is the average power transmitted through the string?</p>
+            <input type="number" id="userAnswer2c" placeholder="Enter Answer">
+            <button onclick="question2c()" class="btn btn-primary">Submit</button>
+        </div>
+
+        <!--QUESTION #3-->
+
+
+        <div class="hidden container" id="question3">
+
+            <h3>Question #3</h3>
+            <p>A person on a bicycle is traveling at a rate of
+                <input type="number" id="velocityQ3" placeholder="Enter velocity"> m/s toward you while they are blowing a whistle with a frequency of
+                <input type="number" id="freqQ3" placeholder="Enter frequency"> Hz. you are also on a bicycle traveling in line with this person with the whistle. You identify the frequency of the whistle to be that of
+                <input type="number" id="observerF" placeholder="Enter frequency">[enter frequency higher than that of previous frequency input] Hz.
+                <br>
+                <br>
+                <p>a) What is your speed? Are you traveling towards or away from the whistle?</p>
+                <input type="number" id="userAnswer3a" placeholder="Enter Answer">
+                <button onclick="question3a()" class="btn btn-primary">Submit</button>
+
+
+        </div>
+
+        <div class="hidden container" id="question4">
+
+
+            <h3>Question #4</h3>
+            <p>A long string with a linear mass density of
+                <input type="number" id="lmdQ4" placeholder="Enter linear mass density"> kg/m is fixed at both ends though the length is variable (assume linear mass density remains constant). Initially, the length is 2.00 m. A suspended mass of
+                <input type="number" id="massQ4" placeholder="Enter mass"> kg at one end supplies the tension in the string (assume tension remains constant). The rod undergoes small amplitude oscillations that are variable in frequency.</p>
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-2">
+                    <img class="thumbnail-image" src="diagram.png">
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <p>a) What frequencies are required to produce the following standing waves when the string is 2.00 m long? n =
+                <input type="number" id="N" placeholder="Enter n ">
+            </p>
+            <input type="number" id="userAnswer4a" placeholder="Enter Answer">
+            <button onclick="question4a()" class="btn btn-primary">Submit</button>
+            <br>
+            <br>
+            <p>b) The system now tuned to a frequency producing a n =
+                <input type="number" id="NQ" placeholder="Enter n "> standing wave on the 2.00 m string. The length of the fixed fortion of the string is now decreased over time at a constant rate of 1.25 * 10^-2 m/s. At what time should the string stop decreasing its selngth such that there is a n =
+                <input type="number" id="NQ4" placeholder="Enter n "> [enter n less that the n previosly entered] standing wave? </p>
+            <input type="number" id="userAnswer4b" placeholder="Enter Answer">
+            <button onclick="question4b()" class="btn btn-primary">Submit</button>
+
+
+
+        </div>
+
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

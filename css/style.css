@@ -1,0 +1,12 @@
+
+
+
+.bgimage {
+	background-image: url('../physIMG.jpg');
+	background-position: bottom left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-width: 750px;
+	max-height: 250px;
+	
+}
